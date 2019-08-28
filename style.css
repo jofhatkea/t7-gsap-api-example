@@ -1,0 +1,18 @@
+.event,
+.line,
+#ipad {
+  display: none;
+}
+body {
+  background: #e3eff2;
+}
+
+#test {
+  display: flex;
+  justify-content: center;
+}
+#test > svg {
+  display: block;
+  max-height: 100vh;
+  width: auto;
+}
