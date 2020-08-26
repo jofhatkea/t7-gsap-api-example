@@ -1,6 +1,6 @@
 fetch("city2.svg")
-  .then(e => e.text())
-  .then(d => {
+  .then((e) => e.text())
+  .then((d) => {
     document.querySelector("#test").insertAdjacentHTML("afterbegin", d);
     animateTheLivingHellOutOfIt();
   });
@@ -16,12 +16,12 @@ function animateTheLivingHellOutOfIt() {
       { y: -1000, opacity: 0.6, ease: Power3.easeInOut },
       0.3
     )
-    .staggerTo("path", 1, {
+    .staggerTo(".tree path, .house path", 10, {
       y: () => Math.random() * 1000 - 500,
-      x: () => Math.random() * 1000 - 500
+      x: () => Math.random() * 1000 - 500,
     });
 
-  tl.timeScale(1.5);
+  tl.timeScale(1);
   //tl.seek(20)
   tl.restart();
 }
